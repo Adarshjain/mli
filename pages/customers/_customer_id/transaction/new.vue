@@ -11,7 +11,7 @@
         v-model="transact_date"
         :mobile-native="false"
         icon="calendar-today"
-        placeholder="Click to select..."
+        placeholder="Click to select...."
         trap-focus
       >
       </b-datepicker>
