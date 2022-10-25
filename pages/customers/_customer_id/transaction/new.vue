@@ -127,9 +127,11 @@ export default class ProjectNew extends Vue {
       $success('Transaction created');
       let projectsUrl = ''
       if (this.project !== '') {
+        //@ts-ignore
         projectsUrl += `/projects/${this.project.id}`
       }
       await this.$router.push({
+        //@ts-ignore
         path: `/customers/${this.customer.id}${projectsUrl}`
       })
     } catch (e) {
