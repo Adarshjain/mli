@@ -11,12 +11,34 @@ const routes: Array<RouteConfig> = [
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/customers/new',
+    name: 'NewCustomer',
+    component: () => import(/* webpackChunkName: "NewCustomer" */ '../views/NewCustomer.vue')
+  },
+  {
+    path: '/customers/:id',
+    name: 'TransactionByCustomer',
+    component: () => import(/* webpackChunkName: "TransactionByCustomer" */ '../views/TransactionByCustomer.vue')
+  },
+  {
+    path: '/customers/:id/projects',
+    name: 'ProjectsByCustomer',
+    component: () => import(/* webpackChunkName: "ProjectsByCustomer" */ '../views/ProjectsByCustomer.vue')
+  },
+  {
+    path: '/customers/:id/projects/new',
+    name: 'NewProject',
+    component: () => import(/* webpackChunkName: "NewProject" */ '../views/NewProject.vue')
+  },
+  {
+    path: '/customers/:id/transaction/new',
+    name: 'NewProject',
+    component: () => import(/* webpackChunkName: "NewTransactionByCustomer" */ '../views/NewTransactionByCustomer.vue')
+  },
+  {
+    path: '/customers/:id/projects/:projectId',
+    name: 'ProjectTransactionByCustomerAndProjectId',
+    component: () => import(/* webpackChunkName: "ProjectTransactionByCustomerAndProjectId" */ '../views/ProjectTransactionByCustomerAndProjectId.vue')
   }
 ]
 
