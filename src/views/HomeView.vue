@@ -37,6 +37,7 @@
 import {Component, Vue} from 'vue-property-decorator';
 import {formatDateFromSQLFormat} from "@/helpers";
 import {execQuery, getAllCustomersQuery, getAllTransactionsQuery} from "@/queries";
+import {config} from "@/constants";
 
 @Component({
   name: 'HomeView'
@@ -45,6 +46,7 @@ export default class HomeView extends Vue {
   customers: any[] = []
 
   async mounted() {
+    console.log('sdfsdf',config.a)
     const customers = await execQuery(getAllCustomersQuery())
     const transactions = await execQuery(getAllTransactionsQuery())
 
