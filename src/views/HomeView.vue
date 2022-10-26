@@ -37,7 +37,6 @@
 import {Component, Vue} from 'vue-property-decorator';
 import {formatDateFromSQLFormat} from "@/helpers";
 import {execQuery, getAllCustomersQuery, getAllTransactionsQuery} from "@/queries";
-import {config} from "@/constants";
 
 @Component({
   name: 'HomeView'

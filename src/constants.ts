@@ -6,6 +6,6 @@ export const tableNames = {
 
 export const config = {
   host: 'aws.connect.psdb.cloud',
-  username: 'v0l6xa9nafz5j0u4nvvi',
+  username: process.env.PS_USERNAME,
   password: process.env.PS_PASS
 }
